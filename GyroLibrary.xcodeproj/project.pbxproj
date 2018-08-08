@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37FC4750968BC0B24ABCF562 /* Pods_GyroLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D632CD14F1CCDAA5F257D3 /* Pods_GyroLibrary.framework */; };
 		CB2D0D20211A883700110D97 /* GyroLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2D0D1E211A883700110D97 /* GyroLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		603AC4B0B323E0F6FFBE40EA /* Pods-GyroLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-GyroLibrary/Pods-GyroLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		6609597811C1E19BC18EB778 /* Pods-GyroLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GyroLibrary/Pods-GyroLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D632CD14F1CCDAA5F257D3 /* Pods_GyroLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GyroLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2D0D1B211A883600110D97 /* GyroLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GyroLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2D0D1E211A883700110D97 /* GyroLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GyroLibrary.h; sourceTree = "<group>"; };
 		CB2D0D1F211A883700110D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -21,17 +25,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FC4750968BC0B24ABCF562 /* Pods_GyroLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12844C4051A7AA36CFA79CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6609597811C1E19BC18EB778 /* Pods-GyroLibrary.debug.xcconfig */,
+				603AC4B0B323E0F6FFBE40EA /* Pods-GyroLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CB2D0D11211A883600110D97 = {
 			isa = PBXGroup;
 			children = (
 				CB2D0D1D211A883600110D97 /* GyroLibrary */,
 				CB2D0D1C211A883600110D97 /* Products */,
+				12844C4051A7AA36CFA79CC2 /* Pods */,
+				D40FAD9CB98F92B4A9C41374 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +68,14 @@
 			path = GyroLibrary;
 			sourceTree = "<group>";
 		};
+		D40FAD9CB98F92B4A9C41374 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4D632CD14F1CCDAA5F257D3 /* Pods_GyroLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB2D0D23211A883700110D97 /* Build configuration list for PBXNativeTarget "GyroLibrary" */;
 			buildPhases = (
+				1B35D4C12BB176526926B4AB /* [CP] Check Pods Manifest.lock */,
 				CB2D0D16211A883600110D97 /* Sources */,
 				CB2D0D17211A883600110D97 /* Frameworks */,
 				CB2D0D18211A883600110D97 /* Headers */,
 				CB2D0D19211A883600110D97 /* Resources */,
+				97D8F02425BFC63BB765331D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +151,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B35D4C12BB176526926B4AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GyroLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97D8F02425BFC63BB765331D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GyroLibrary/Pods-GyroLibrary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB2D0D16211A883600110D97 /* Sources */ = {
@@ -252,6 +314,7 @@
 		};
 		CB2D0D24211A883700110D97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6609597811C1E19BC18EB778 /* Pods-GyroLibrary.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -272,6 +335,7 @@
 		};
 		CB2D0D25211A883700110D97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603AC4B0B323E0F6FFBE40EA /* Pods-GyroLibrary.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
